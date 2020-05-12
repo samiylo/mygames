@@ -1,21 +1,22 @@
 <!doctype html>
 <html>
     <head>
-    <title>ToDoo - A To Do App, Dude</title>
+    <title>Video Game Collection</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     </head>
 <body>
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-light bg-warning">
+
     <div class="container-fluid">
     <div class="navbar-header">
-        <a class="navbar-brand" href="/tasks"><i class="fa fa-paperclip"></i> ToDoo</a>
+        <a class="navbar-brand" href="/games"><i class="fa"></i></a>
     <ul class="nav navbar-nav">
 
     <% if logged_in? %>
     <li><a href="/lists/new">Create New List</a></li>
-    <li><a href="/tasks/new">Create New Task</a></li>
+    <li><a href="/games/new">Add New Game</a></li>
     <li><a href="/logout">Log Out</a></li>
 
     <% else %>
