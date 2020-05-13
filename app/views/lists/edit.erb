@@ -5,11 +5,11 @@
 <input type="text" name="name" value="<%=@list.name%>"><br><br>
 
 <% @list.games.each do |game| %>
-<h1><i class="fa fa-minus"></i><%= game.name %></h1>
-<a href="/games/<%= game.id %>/edit"><i class="fa fa-pencil"></i> Edit Game</a>
-<a href="/games/<%= game.id %>/delete"><i class="fa fa-times"></i> Delete Game</a>
+<h1><i class="fa"></i><%= game.name %></h1>
+<a href="/games/<%= game.id %>/edit"><i class="fa"></i> Edit Game</a>
+<a href="/games/<%= game.id %>/delete"><i class="fa"></i> Delete Game</a>
 <% end %>
 
 <br>
-<input class="btn btn-primary" type="submit" name="update" value="Update">
+<input class="btn btn-success" type="submit" name="update" value="Update">
 </form>
