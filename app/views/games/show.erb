@@ -1,11 +1,11 @@
 
 <h1>Hello <%=@user.username %>!</h1>
-<a href="/lists/new"><button type="button" class="btn btn-default">Create A New List</button></a>
+<a href="/lists/new"><button type="button" class="btn btn-success">Create A New List</button></a>
 
 <div class="col-6">
 <% @lists.each do |list|%>
 <% if list.user_id == @user.id %>
-<!-- So this pulls all lists and checks it it matches the user id before iterating over them -->
+
 <h2><%= list.name %></h2>
 <a href="/lists/<%=list.id%>/edit"><i ></i> Edit List</a>
 <a href="/lists/<%=list.id%>/delete"><i ></i> Delete List</a>
