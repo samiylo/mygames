@@ -10,6 +10,7 @@ class ListsController < ApplicationController
         list = @user.lists.create(:name => params[:name])
         game = list.games.create(:name => params[:games][:name])
         redirect '/games'
+
     end
     
     get '/lists/:id/edit' do

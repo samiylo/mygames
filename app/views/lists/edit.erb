@@ -6,8 +6,8 @@
 
 <% @list.games.each do |game| %>
 <h1><i class="fa fa-minus"></i><%= game.name %></h1>
-<a href="/games/<%= game.id %>/edit"><i class="fa fa-pencil"></i> Edit Task</a>
-<a href="/games/<%= game.id %>/delete"><i class="fa fa-times"></i> Delete Task</a>
+<a href="/games/<%= game.id %>/edit"><i class="fa fa-pencil"></i> Edit Game</a>
+<a href="/games/<%= game.id %>/delete"><i class="fa fa-times"></i> Delete Game</a>
 <% end %>
 
 <br>
