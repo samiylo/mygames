@@ -3,7 +3,7 @@ class GamesController < ApplicationController
     get '/games' do
         redirect_if_not_logged_in
         @user = current_user
-        @lists = @user.lists
+        @lists = current_user.lists
         erb :'games/show'
     end
 
@@ -19,6 +19,9 @@ class GamesController < ApplicationController
         redirect '/games'
         end
     
+    # Nested Routs REFACTOR
+    # We are creating a new Game From list
+    # We would need to get straight through ID's rather than pick the ID from Games
     
     get '/games/new/:id' do
         redirect_if_not_logged_in
@@ -34,8 +37,11 @@ class GamesController < ApplicationController
     
     
     get '/games/:id/edit' do
+
         @game = Game.find_by_id(params[:id])
+        authorize(@game)
         erb :'/games/edit'
+
     end
     
     patch '/games/:id' do

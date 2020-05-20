@@ -27,6 +27,12 @@ class ApplicationController < Sinatra::Base
         def current_user
             User.find(session[:user_id])
         end
+
+        def authorize(game)
+            if game.user_id != current_user.id 
+                redirect "/games"
+            end
+        end
     
     end
 
